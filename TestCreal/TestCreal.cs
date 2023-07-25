@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CReal
+namespace TestCReal
 {
     public class TestCreal : MonoBehaviour
     {
