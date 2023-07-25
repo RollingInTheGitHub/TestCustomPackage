@@ -1,7 +1,7 @@
 {
   "name": "com.configreality.creal",
   "version": "0.1.0",
-  "displayName": "Package Example",
+  "displayName": "Test CReal Package",
   "description": "This is an example package",
   "unity": "2021.3",
   "unityRelease": "0b5",
