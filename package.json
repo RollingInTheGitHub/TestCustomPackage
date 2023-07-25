@@ -9,12 +9,8 @@
   "changelogUrl": "https://example.com/changelog.html",
   "licensesUrl": "https://example.com/licensing.html",
   "dependencies": {
+	  "com.unity.2d.sprite",
  },
- "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
   "author": {
     "name": "Unity",
     "email": "unity@example.com",
