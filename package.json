@@ -4,10 +4,14 @@
   "displayName": "Test CReal Package",
   "description": "This is an example package",
   "unity": "2021.3",
-  "unityRelease": "0b5",
+  "keywords": [
+    "Unity",
+    "CReal",
+    "Virtual Spaces",
+    "Metaverse"
+  ],
+  "homepage": "https://www.google.com/",
   "documentationUrl": "https://example.com/",
-  "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
   "dependencies": {
 	  "com.unity.2d.sprite":"1.0.0"
 	},
