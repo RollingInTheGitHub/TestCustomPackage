@@ -1,6 +1,6 @@
 {
   "name": "com.configreality.creal",
-  "version": "0.1.0",
+  "version": "0.12.3",
   "displayName": "Test CReal Package",
   "description": "This is an example package",
   "unity": "2021.3",
@@ -15,6 +15,8 @@
   "dependencies": {
 	  "com.unity.2d.sprite":"1.0.0"
 	},
+  "enableLockFile": true,
+  "resolutionStrategy": "highest",
   "author": {
     "name": "Unity",
     "email": "unity@example.com",
