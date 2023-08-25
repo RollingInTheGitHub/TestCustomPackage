@@ -1,0 +1,126 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/CRealSDKConfigWindowStyles.uss?fileID=7433441132597879392&amp;guid=82dc723ea74faf54bb758327a562347e&amp;type=3#CRealSDKConfigWindowStyles" />
+    <ui:VisualElement style="min-width: auto; min-height: auto; flex-grow: 1;">
+        <ui:VisualElement name="Header" style="flex-direction: row; justify-content: center; flex-wrap: wrap; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; margin-bottom: 16px; margin-left: 0; margin-right: 0; align-items: center;">
+            <ui:VisualElement name="LogoGroup" style="border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; align-items: center; flex-direction: row; justify-content: center; flex-shrink: 1; padding-top: 8px;">
+                <ui:VisualElement name="Logo" style="background-image: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/Texture/Icon_CrealSDK.png?fileID=2800000&amp;guid=9a884a1a9c924704e96ae7eb6c19f81d&amp;type=3#Icon_CrealSDK&apos;); height: 32px; width: 131px; position: relative; left: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
+            <ui:Button text="登录" display-tooltip-when-elided="true" name="accountButton" class="tabButton tabButtonSelected" style="margin-left: 0; display: flex;" />
+            <ui:Button text="配置" display-tooltip-when-elided="true" name="configButton" class="tabButton" />
+            <ui:Button text="检查" display-tooltip-when-elided="true" name="utilitiesButton" class="tabButton" />
+            <ui:Button text="更多" display-tooltip-when-elided="true" name="helpButton" class="tabButton" />
+        </ui:VisualElement>
+        <ui:ScrollView>
+            <ui:VisualElement name="account" style="align-items: stretch; display: none; opacity: 1; flex-shrink: 0; justify-content: flex-start;">
+                <ui:VisualElement name="notLoggedInBlock" class="block_white block_base block_red" style="display: flex;">
+                    <ui:Label text="未登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                    <ui:Label text="请按照以下步骤登录 CReal SDK" display-tooltip-when-elided="true" name="Text" class="blockText" style="-unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="loggingInBlock" class="block_white block_base block_yellow" style="display: none;">
+                    <ui:Label text="登录中..." display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                </ui:VisualElement>
+                <ui:VisualElement name="loggedInBlock" class="block_white block_base block_green" style="flex-direction: row; flex-grow: 1; flex-shrink: 1; display: none;">
+                    <ui:VisualElement name="LeftLayout" style="flex-grow: 1;">
+                        <ui:Label text="已登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                        <ui:Label text="账号  Username (username@email.com)" display-tooltip-when-elided="true" name="loggedInAsText" class="blockText" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="RightLayout">
+                        <ui:VisualElement name="ButtonGroup" style="min-height: auto; min-width: auto; display: flex; justify-content: flex-end; flex-direction: row;">
+                            <ui:Button text="退出登录" display-tooltip-when-elided="true" name="logout" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="projectConfig" class="block_white block_base" style="display: flex;">
+                    <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
+                        <ui:Label text="步骤1   " display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
+                    </ui:VisualElement>
+                    <ui:Label text="Copy your access token from Creal Portal by clicking the button below and logging &#10;into your CReal account.&#10;" display-tooltip-when-elided="true" />
+                    <ui:Button text="获取Token" display-tooltip-when-elided="true" name="getToken" class="blockButton blockButton_small" style="opacity: 1; width: 139px; -unity-font-style: normal;" />
+                    <ui:VisualElement name="worldSelector" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px;" />
+                    <ui:VisualElement name="create" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px;" />
+                    <ui:Label text="请不要将Token分享给其他人" display-tooltip-when-elided="true" class="text_yellow" style="text-shadow: 0 0 0 rgb(255, 252, 52);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="projectConfig" class="block_white block_base">
+                    <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
+                        <ui:Label text="步骤2" display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
+                    </ui:VisualElement>
+                    <ui:Label text="Paste your access token into unity by pressing the button below.&#10;" display-tooltip-when-elided="true" />
+                    <ui:Button text="粘贴Token" display-tooltip-when-elided="true" name="pasteToken" class="blockButton blockButton_small" style="opacity: 1; width: 139px; -unity-font-style: normal;" />
+                    <ui:VisualElement name="worldSelector" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px;" />
+                    <ui:VisualElement name="create" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="config" style="display: flex; height: auto;">
+                <ui:VisualElement name="notLoggedInBlock" class="block_white block_base block_red" style="align-items: stretch; flex-direction: row; flex-basis: auto; justify-content: flex-start; width: auto; display: flex;">
+                    <ui:GroupBox name="LeftLayout" style="align-items: stretch; justify-content: flex-start;">
+                        <ui:Label text="未登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                        <ui:Label text="登录后即可进行空间配置及发布" display-tooltip-when-elided="true" name="Text" class="blockText" />
+                    </ui:GroupBox>
+                    <ui:GroupBox name="RightLayout" style="width: 259px; align-items: flex-end; justify-content: center; height: 58px; left: 50px;">
+                        <ui:Button text="登录" display-tooltip-when-elided="true" name="accountButton" class="blockButton blockButton_small" style="opacity: 1; width: 139px; align-items: center; justify-content: flex-start; -unity-font-style: normal;" />
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="packageConfig" class="block_white block_base" style="padding-bottom: 12px; margin-bottom: 0; min-height: auto;">
+                    <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
+                        <ui:Label text="发布配置" display-tooltip-when-elided="true" name="nameHeader" class="blockTitle" style="width: 114px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="worldSelector" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px; display: flex;">
+                        <ui:DropdownField label="空间名称" index="-1" name="defaultWorldDropDown" style="margin-left: 3px; margin-right: 5px; margin-top: 0; margin-bottom: 0; display: flex; width: 403px;" />
+                        <ui:Button text="刷新" display-tooltip-when-elided="true" name="refreshWorldsButton" enable-rich-text="false" tooltip="Fetch all the worlds for your account" style="height: 22px; margin-left: 0; margin-right: 5px; margin-top: 0; margin-bottom: 0; width: auto; min-width: 60px;" />
+                        <ui:Button text="新建空间" display-tooltip-when-elided="true" name="createWorldsButton" tooltip="Create a new world and assign it to this project" style="height: 22px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: auto; min-width: 60px;" />
+                    </ui:VisualElement>
+                    <uie:Toolbar name="createSpaceBlock" style="height: 136px; width: 539px; flex-direction: column; display: flex; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+                        <ui:Label text="新建空间" display-tooltip-when-elided="false" enable-rich-text="true" style="-unity-font-style: normal; -unity-font: none; width: auto; margin-left: 3px; left: 4px; top: 4px; height: auto; right: 0; bottom: 0; margin-top: 3px; margin-bottom: 3px; padding-top: 3px; padding-bottom: 3px;" />
+                        <ui:VisualElement style="flex-direction: row; margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; display: flex; align-items: auto; height: auto; top: 3px; left: 4px; border-top-width: 3px; border-left-width: 1px; border-bottom-width: 3px; padding-top: 3px; padding-bottom: 3px; max-height: 10px;">
+                            <ui:Label text="空间ID" display-tooltip-when-elided="true" enable-rich-text="false" class="unity-base-field__label" style="margin-top: 0; margin-bottom: 0; padding-bottom: 0; margin-right: 0; display: flex; padding-top: 0; padding-right: 0; padding-left: 0; align-items: auto;" />
+                            <ui:Label text="空间创建成功后自动生成" display-tooltip-when-elided="true" enable-rich-text="false" name="createSpaceID" style="color: rgb(168, 168, 168); padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 0; padding-right: 0; padding-left: 0;" />
+                        </ui:VisualElement>
+                        <ui:TextField picking-mode="Ignore" label="新空间名称*" password="false" multiline="false" name="createSpaceName" mask-character="空间描述，用以介绍空间" is-delayed="false" text="请输入空间名称" class="textField" style="overflow: visible; margin-left: 3px; margin-top: 3px; margin-bottom: 2px; padding-bottom: 2px; padding-top: 3px; align-items: auto; -unity-text-align: upper-left; flex-direction: row; top: auto; left: auto; right: auto; border-left-width: 4px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" label="空间描述" password="false" multiline="false" name="createSpaceDes" mask-character="空间描述，用以介绍空间" is-delayed="false" text="空间描述，用以介绍空间" class="textField" style="overflow: hidden; padding-bottom: 2px; padding-top: 2px; margin-bottom: 2px; margin-top: 2px; top: auto; left: auto; border-left-width: 4px; border-right-width: 0; border-bottom-right-radius: 0;" />
+                        <ui:GroupBox style="flex-direction: row; align-items: flex-start; justify-content: flex-end; height: 30px; -unity-text-align: upper-right; top: 2px; bottom: auto; padding-top: 2px; margin-top: 2px;">
+                            <ui:Button text="取消" display-tooltip-when-elided="true" name="cancelCreateSpace" class="blockButton blockButton_small" style="opacity: 1; width: 50px; align-items: center; justify-content: center; margin-left: 25px; -unity-font-style: normal; height: 20px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; padding-top: 0; margin-top: 0;" />
+                            <ui:Button text="确认" display-tooltip-when-elided="true" name="confirmCreateSpace" class="blockButton blockButton_small" style="opacity: 1; width: 50px; align-items: center; justify-content: flex-start; margin-left: 13px; -unity-font-style: normal; height: 20px; margin-right: 9px;" />
+                        </ui:GroupBox>
+                    </uie:Toolbar>
+                    <ui:VisualElement style="flex-direction: row; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; display: flex;">
+                        <ui:Label text="空间ID" display-tooltip-when-elided="true" enable-rich-text="false" class="unity-base-field__label" style="margin-top: 2px; margin-bottom: 0; padding-bottom: 0; margin-right: 0;" />
+                        <ui:Label text="空间创建成功后自动生成" display-tooltip-when-elided="true" enable-rich-text="false" name="spaceID" style="color: rgb(168, 168, 168); padding-top: 2px; padding-bottom: 0; margin-bottom: 0; margin-top: 2px;" />
+                    </ui:VisualElement>
+                    <ui:TextField picking-mode="Ignore" label="空间描述" password="false" multiline="false" name="spaceDes" mask-character="空间描述，用以介绍空间" is-delayed="false" text="空间描述，用以介绍空间" class="textField" style="overflow: visible; padding-bottom: 0; padding-top: 0; margin-bottom: 2px; margin-top: 2px;" />
+                    <ui:VisualElement name="spaceConfig" style="margin-top: 10px; display: flex;">
+                        <uie:PropertyField label="Scene" name="scene" binding-path="scene" />
+                        <uie:PropertyField label="Thumbnail" name="thumbnail" binding-path="thumbnail" />
+                    </ui:VisualElement>
+                    <ui:Button text="发布" display-tooltip-when-elided="true" name="publishPackageButton" class="blockButton blockButton_small" style="opacity: 1; width: 50px; align-items: auto; justify-content: flex-start; margin-left: 13px; -unity-font-style: normal; height: 20px; margin-right: 9px; left: auto; right: 0; position: relative; -unity-text-align: middle-center; transform-origin: right bottom; translate: 469px 0; bottom: -5px; margin-top: 0; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; transition-property: all;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="utilities" style="align-items: center; display: none;">
+                <ui:VisualElement name="OptimizationBlock" class="block_white block_base" style="bottom: auto; height: 128px;">
+                    <ui:Label text="敬请期待！" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="help" style="align-items: center; display: none;">
+                <ui:VisualElement name="DocsBlock" class="block_white block_base">
+                    <ui:Label text="文档" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                    <ui:Label text="阅读有关如何使用组件、编辑空间、发布空间的指南。" display-tooltip-when-elided="true" name="Text" class="blockText" />
+                    <ui:VisualElement name="ButtonGroup" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 10px; display: flex;">
+                        <ui:Button text="查看文档" display-tooltip-when-elided="true" name="gotoDocumentation" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:VisualElement name="Filler" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="DiscordBlock" class="block_white block_base">
+                    <ui:Label text="SDK 更新" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
+                    <ui:Label text="点击下方按钮检查 SDK 并进行更新。" display-tooltip-when-elided="true" name="Text" class="blockText" />
+                    <ui:VisualElement name="ButtonGroup" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 10px; display: flex;">
+                        <ui:Button text="检查更新" display-tooltip-when-elided="true" name="gotoDiscord" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:VisualElement name="Filler" style="flex-grow: 1; top: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>
