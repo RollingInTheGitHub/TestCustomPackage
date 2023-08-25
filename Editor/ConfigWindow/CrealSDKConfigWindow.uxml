@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Packages/com.configreality.creal/Editor/ConfigWindow/CRealSDKConfigWindowStyles.uss?fileID=7433441132597879392&amp;guid=82dc723ea74faf54bb758327a562347e&amp;type=3#CRealSDKConfigWindowStyles" />
+    <Style src="project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/CRealSDKConfigWindowStyles.uss?fileID=7433441132597879392&amp;guid=82dc723ea74faf54bb758327a562347e&amp;type=3#CRealSDKConfigWindowStyles" />
     <ui:VisualElement style="min-width: auto; min-height: auto; flex-grow: 1;">
         <ui:VisualElement name="Header" style="flex-direction: row; justify-content: center; flex-wrap: wrap; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; margin-bottom: 16px; margin-left: 0; margin-right: 0; align-items: center;">
             <ui:VisualElement name="LogoGroup" style="border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; align-items: center; flex-direction: row; justify-content: center; flex-shrink: 1; padding-top: 8px;">
@@ -12,10 +12,10 @@
             <ui:Button text="更多" display-tooltip-when-elided="true" name="helpButton" class="tabButton" />
         </ui:VisualElement>
         <ui:ScrollView>
-            <ui:VisualElement name="account" style="align-items: stretch; display: none; opacity: 1; flex-shrink: 0; justify-content: flex-start;">
+            <ui:VisualElement name="account" style="align-items: stretch; display: flex; opacity: 1; flex-shrink: 0; justify-content: flex-start;">
                 <ui:VisualElement name="notLoggedInBlock" class="block_white block_base block_red" style="display: flex;">
-                    <ui:Label text="未登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
-                    <ui:Label text="请按照以下步骤登录 CReal SDK" display-tooltip-when-elided="true" name="Text" class="blockText" style="-unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                    <ui:Label text="未登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" style="-unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                    <ui:Label text="请按照以下步骤登录 CReal SDK" display-tooltip-when-elided="true" name="Text" class="blockText" style="-unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="loggingInBlock" class="block_white block_base block_yellow" style="display: none;">
                     <ui:Label text="登录中..." display-tooltip-when-elided="true" name="Header" class="blockTitle" />
@@ -27,13 +27,13 @@
                     </ui:VisualElement>
                     <ui:VisualElement name="RightLayout">
                         <ui:VisualElement name="ButtonGroup" style="min-height: auto; min-width: auto; display: flex; justify-content: flex-end; flex-direction: row;">
-                            <ui:Button text="退出登录" display-tooltip-when-elided="true" name="logout" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                            <ui:Button text="退出登录" display-tooltip-when-elided="true" name="logout" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="projectConfig" class="block_white block_base" style="display: flex;">
-                    <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
-                        <ui:Label text="步骤1   " display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                    <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;">
+                        <ui:Label text="步骤1   " display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
                     </ui:VisualElement>
                     <ui:Label text="Copy your access token from Creal Portal by clicking the button below and logging &#10;into your CReal account.&#10;" display-tooltip-when-elided="true" />
@@ -44,7 +44,7 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="projectConfig" class="block_white block_base">
                     <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
-                        <ui:Label text="步骤2" display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:Label text="步骤2" display-tooltip-when-elided="true" name="Header" class="blockTitle" style="margin-right: 4px; padding-right: 4px; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
                     </ui:VisualElement>
                     <ui:Label text="Paste your access token into unity by pressing the button below.&#10;" display-tooltip-when-elided="true" />
@@ -53,19 +53,19 @@
                     <ui:VisualElement name="create" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="config" style="display: flex; height: auto;">
+            <ui:VisualElement name="config" style="display: none; height: auto;">
                 <ui:VisualElement name="notLoggedInBlock" class="block_white block_base block_red" style="align-items: stretch; flex-direction: row; flex-basis: auto; justify-content: flex-start; width: auto; display: flex;">
                     <ui:GroupBox name="LeftLayout" style="align-items: stretch; justify-content: flex-start;">
                         <ui:Label text="未登录" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
-                        <ui:Label text="登录后即可进行空间配置及发布" display-tooltip-when-elided="true" name="Text" class="blockText" />
+                        <ui:Label text="登录后即可进行空间配置及发布" display-tooltip-when-elided="true" name="Text" class="blockText" style="-unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="RightLayout" style="width: 259px; align-items: flex-end; justify-content: center; height: 58px; left: 50px;">
-                        <ui:Button text="登录" display-tooltip-when-elided="true" name="accountButton" class="blockButton blockButton_small" style="opacity: 1; width: 139px; align-items: center; justify-content: flex-start; -unity-font-style: normal;" />
+                        <ui:Button text="登录" display-tooltip-when-elided="true" name="accountButton" class="blockButton blockButton_small" style="opacity: 1; width: 139px; align-items: center; justify-content: flex-start; -unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                     </ui:GroupBox>
                 </ui:VisualElement>
                 <ui:VisualElement name="packageConfig" class="block_white block_base" style="padding-bottom: 12px; margin-bottom: 0; min-height: auto;">
                     <ui:VisualElement name="header" style="flex-direction: row; margin-bottom: 8px;">
-                        <ui:Label text="发布配置" display-tooltip-when-elided="true" name="nameHeader" class="blockTitle" style="width: 114px; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:Label text="发布配置" display-tooltip-when-elided="true" name="nameHeader" class="blockTitle" style="width: 114px; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         <ui:VisualElement name="Filler" style="flex-grow: 1; height: 0;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="worldSelector" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 0; margin-bottom: 3px; display: flex;">
@@ -108,7 +108,7 @@
                     <ui:Label text="文档" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
                     <ui:Label text="阅读有关如何使用组件、编辑空间、发布空间的指南。" display-tooltip-when-elided="true" name="Text" class="blockText" />
                     <ui:VisualElement name="ButtonGroup" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 10px; display: flex;">
-                        <ui:Button text="查看文档" display-tooltip-when-elided="true" name="gotoDocumentation" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:Button text="查看文档" display-tooltip-when-elided="true" name="gotoDocumentation" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         <ui:VisualElement name="Filler" style="flex-grow: 1;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -116,7 +116,7 @@
                     <ui:Label text="SDK 更新" display-tooltip-when-elided="true" name="Header" class="blockTitle" />
                     <ui:Label text="点击下方按钮检查 SDK 并进行更新。" display-tooltip-when-elided="true" name="Text" class="blockText" />
                     <ui:VisualElement name="ButtonGroup" style="flex-direction: row; min-height: auto; min-width: auto; margin-top: 10px; display: flex;">
-                        <ui:Button text="检查更新" display-tooltip-when-elided="true" name="gotoDiscord" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/CReal/Font/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
+                        <ui:Button text="检查更新" display-tooltip-when-elided="true" name="gotoDiscord" class="blockButton" style="-unity-font-style: normal; -unity-font: url(&apos;project://database/Assets/Scripts/CrealCode/Editor/ClientEditorBase/ConfigWindow/AlibabaPuHuiTi-3-55-Regular.ttf?fileID=12800000&amp;guid=89774bc837bd1f3488fc80cc404dd7ca&amp;type=3#AlibabaPuHuiTi-3-55-Regular&apos;); -unity-font-definition: none;" />
                         <ui:VisualElement name="Filler" style="flex-grow: 1; top: 0;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
