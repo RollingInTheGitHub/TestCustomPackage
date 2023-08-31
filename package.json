@@ -2,8 +2,8 @@
   "name": "com.configreality.creal",
   "version": "0.12.3",
   "displayName": "CReal SDK Package",
-  "description": "This is an example package",
-  "unity": "2021.3",
+  "description": "This is an CReal SDK package",
+  "unity": "2022.3",
   "keywords": [
     "Unity",
     "CReal",
@@ -13,7 +13,7 @@
   "homepage": "https://www.google.com/",
   "documentationUrl": "https://example.com/",
   "dependencies": {
-	  "com.unity.2d.sprite":"1.0.0"
+	  "com.unity.cinemachine": "2.9.5",
 	},
   "enableLockFile": true,
   "resolutionStrategy": "highest",
@@ -22,11 +22,4 @@
     "email": "unity@example.com",
     "url": "https://www.unity3d.com"
   },
-  "samples": [
-        {
-            "displayName": "CReal sample",
-            "description": "Contains sample call dll.",
-            "path": "Samples"
-        }
-    ]
 }
